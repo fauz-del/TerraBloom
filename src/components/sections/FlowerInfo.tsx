@@ -138,7 +138,6 @@ export const FlowerInfo = () => {
                   </div>
                 </div>
 
-                {/* Narrative Sections */}
                 <div className="space-y-8">
                   <div className="space-y-3">
                     <h4 className="font-bold text-[10px] uppercase tracking-widest text-stone-800">Historical Origin</h4>

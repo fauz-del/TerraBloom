@@ -15,7 +15,7 @@ export const Collection = () => {
 
   return (
     <section id="collection" className="py-24 md:py-32 bg-[#FCF8F3] overflow-hidden">
-      {/* Header Section */}
+  
       <div className="max-w-7xl mx-auto px-6 md:px-10 mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
