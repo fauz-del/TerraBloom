@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FLOWERS = [
-  { name: 'Dahlia', img: 'flowers/dahlia.jpeg', color: '#f9f5f1', season: 'Autumn' },
-  { name: 'Jasmine', img: 'flowers/Jasmine.jpeg', color: '#f2f0ea', season: 'Summer' },
-  { name: 'Peony', img: 'flowers/peony.jpeg', color: '#f7f1ef', season: 'Spring' },
-  { name: 'Lavender', img: 'flowers/lavender1.jpeg', color: '#f0f0f5', season: 'All Year' },
-  { name: 'Orchid', img: 'flowers/orchid.jpeg', color: '#fbf8f6', season: 'Winter' },
-  { name: 'Tulip', img: 'flowers/tulip.jpeg', color: '#f8f4f2', season: 'Spring' },
+  { name: 'Dahlia', img: '/flowers/dahlia.jpeg', color: '#f9f5f1', season: 'Autumn' },
+  { name: 'Jasmine', img: '/flowers/Jasmine.jpeg', color: '#f2f0ea', season: 'Summer' },
+  { name: 'Peony', img: '/flowers/peony.jpeg', color: '#f7f1ef', season: 'Spring' },
+  { name: 'Lavender', img: '/flowers/lavender1.jpeg', color: '#f0f0f5', season: 'All Year' },
+  { name: 'Orchid', img: '/flowers/orchid.jpeg', color: '#fbf8f6', season: 'Winter' },
+  { name: 'Tulip', img: '/flowers/tulip.jpeg', color: '#f8f4f2', season: 'Spring' },
 ];
 
 export const Collection = () => {
