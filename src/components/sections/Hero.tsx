@@ -2,9 +2,9 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react';
 
 const IMAGES = [
-  { url: 'flowers/hero1.jpeg', label: 'Ethereal' },
-  { url: 'flowers/hero2.jpeg', label: 'Wild' },
-  { url: 'flowers/hero3.jpeg', label: 'Sculptural' }
+  { url: '/flowers/hero1.jpeg', label: 'Ethereal' },
+  { url: '/flowers/hero2.jpeg', label: 'Wild' },
+  { url: '/flowers/hero3.jpeg', label: 'Sculptural' }
 ];
 
 export const Hero = () => {
@@ -85,7 +85,7 @@ export const Hero = () => {
             style={{ y: y2 }}
             className="absolute -bottom-10 -left-10 md:left-0 w-48 h-64 border-[12px] border-white shadow-xl hidden md:block overflow-hidden"
           >
-            <img src="flowers/hero4.jpeg" className="w-full h-full object-cover" alt="Detail" />
+            <img src="/flowers/hero4.jpeg" className="w-full h-full object-cover" alt="Detail" />
           </motion.div>
         </div>
       </div>
