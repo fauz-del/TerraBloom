@@ -11,7 +11,7 @@ const BOTANICAL_DATA = [
     care: 'Requires direct sunlight and well-draining acidic soil. Water sparingly once established.',
     occasions: ['Architectural Spaces', 'Milestone Achievements', 'Modern Bridal'],
     price: '$95.00',
-    image: 'flowers/hero1.jpeg' 
+    image: '/flowers/hero1.jpeg' 
   },
   {
     name: 'Midnight Dahlia',
@@ -21,7 +21,7 @@ const BOTANICAL_DATA = [
     care: 'Thrives in partial shade with consistent moisture. Deadhead regularly to encourage a continuous, dramatic bloom throughout the season.',
     occasions: ['Evening Galas', 'Romantic Gestures', 'Interior Focal Points'],
     price: '$65.00',
-    image: 'flowers/dahlia.jpeg'
+    image: '/flowers/dahlia.jpeg'
   },
   {
     name: 'English Peony',
@@ -31,7 +31,7 @@ const BOTANICAL_DATA = [
     care: 'Peonies prefer cool soil and plenty of space. Once cut, dip the stems in boiling water for 30 seconds to maximize their vase life.',
     occasions: ['Spring Weddings', 'Home Sanctuary', 'New Beginnings'],
     price: '$85.00',
-    image: 'flowers/peony.jpeg'
+    image: '/flowers/peony.jpeg'
   }
 ];
 
