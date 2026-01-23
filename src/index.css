@@ -1,0 +1,51 @@
+/* Fix: Explicitly import the fonts and weights needed for the design */
+@import url('https://fonts.googleapis.com');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FCF8F3] text-stone-800 antialiased;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* This ensures the snap-scroll in Collection.tsx works without ugly scrollbars */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .font-cursive {
+    font-family: 'Pinyon Script', cursive;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom scrollbar for desktop elegance */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FCF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a373;
+  border-radius: 10px;
+}
+
+/* Selection color for that premium 2026 feel */
+::selection {
+  background-color: #d4a373;
+  color: white;
+}
