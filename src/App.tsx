@@ -1,6 +1,7 @@
+
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/sections/Hero';
-import { About } from './components/sections/About'; // Import here
+import { About } from './components/sections/About'; 
 import { Collection } from './components/sections/Collection';
 import { FlowerInfo } from './components/sections/FlowerInfo';
 import { Testimonials } from './components/sections/Testimonials';
@@ -13,7 +14,7 @@ export default function App() {
       <main>
         <Hero />
         <div className="relative z-10">
-          <About /> {/* Place it first in the scroll flow */}
+          <About /> 
           <Collection />
           <FlowerInfo />
           <Testimonials />
