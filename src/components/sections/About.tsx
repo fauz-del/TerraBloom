@@ -16,12 +16,12 @@ export const About = () => {
           >
             <div className="relative aspect-[3/4] rounded-t-full overflow-hidden shadow-2xl z-10">
               <img 
-                src="/flowers/lavender-field.jpeg" 
+                src="flowers/lavender-field.jpeg" 
                 alt="TerraBloom Studio" 
                 className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000"
               />
             </div>
-            {/* Floating Decorative Element */}
+    
             <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-stone-100 rounded-full flex items-center justify-center text-center p-6 border border-orange-100 hidden md:flex">
               <p className="font-cursive text-2xl text-stone-400" style={{ fontFamily: "'Pinyon Script', cursive" }}>
                 Est. 2026
@@ -29,7 +29,6 @@ export const About = () => {
             </div>
           </motion.div>
 
-          {/* 2. Storytelling Content: Right Side */}
           <div className="lg:col-span-7 space-y-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -55,8 +54,6 @@ export const About = () => {
                 </p>
               </div>
             </motion.div>
-
-            {/* 3. Principles / Stats Grid */}
             <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

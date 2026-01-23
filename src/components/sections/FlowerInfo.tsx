@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react'; // Import Icons
+import { ChevronLeft, ChevronRight } from 'lucide-react'; 
 
 const BOTANICAL_DATA = [
   {
@@ -11,7 +11,7 @@ const BOTANICAL_DATA = [
     care: 'Requires direct sunlight and well-draining acidic soil. Water sparingly once established.',
     occasions: ['Architectural Spaces', 'Milestone Achievements', 'Modern Bridal'],
     price: '$95.00',
-    image: '/flowers/hero1.jpeg' // Use hero1 for the protea image
+    image: 'flowers/hero1.jpeg' 
   },
   {
     name: 'Midnight Dahlia',
@@ -21,7 +21,7 @@ const BOTANICAL_DATA = [
     care: 'Thrives in partial shade with consistent moisture. Deadhead regularly to encourage a continuous, dramatic bloom throughout the season.',
     occasions: ['Evening Galas', 'Romantic Gestures', 'Interior Focal Points'],
     price: '$65.00',
-    image: '/flowers/dahlia.jpeg'
+    image: 'flowers/dahlia.jpeg'
   },
   {
     name: 'English Peony',
@@ -31,7 +31,7 @@ const BOTANICAL_DATA = [
     care: 'Peonies prefer cool soil and plenty of space. Once cut, dip the stems in boiling water for 30 seconds to maximize their vase life.',
     occasions: ['Spring Weddings', 'Home Sanctuary', 'New Beginnings'],
     price: '$85.00',
-    image: '/flowers/peony.jpeg'
+    image: 'flowers/peony.jpeg'
   }
 ];
 
@@ -52,7 +52,7 @@ export const FlowerInfo = () => {
     <section id="info" className="py-24 md:py-40 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         
-        {/* Navigation Tabs - Hidden on mobile, use arrows instead */}
+
         <div className="hidden md:flex gap-8 mb-16 overflow-x-auto no-scrollbar pb-4 border-b border-stone-100">
           {BOTANICAL_DATA.map((flower, i) => (
             <button
@@ -69,11 +69,10 @@ export const FlowerInfo = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
           
-          {/* 1. Large Visual: Added navigation arrows here */}
           <div className="lg:col-span-6 order-1 lg:order-2 relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={current.name} // Key changes to trigger exit/enter animation
+                key={current.name}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.05 }}
@@ -83,14 +82,12 @@ export const FlowerInfo = () => {
                 <img src={current.image} className="w-full h-full object-cover" alt={current.name} />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent" />
                 
-                {/* Floating Price Tag */}
                 <div className="absolute bottom-10 right-10 bg-white/90 backdrop-blur-md p-4 md:p-8 rounded-full shadow-xl">
                   <p className="text-1xl md:text-2xl font-serif italic text-stone-800">{current.price}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Arrows for the Image Block */}
             <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2 px-4 z-10">
                 <button onClick={prevFlower} className="bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition text-stone-800 focus:outline-none">
                     <ChevronLeft size={24} />
@@ -101,11 +98,10 @@ export const FlowerInfo = () => {
             </div>
           </div>
 
-          {/* 2. Comprehensive Details Section */}
           <div className="lg:col-span-6 order-2 lg:order-1 space-y-12">
             <AnimatePresence mode="wait">
               <motion.div
-                key={current.name + '-info'} // Unique key for text animation
+                key={current.name + '-info'} 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
@@ -125,7 +121,6 @@ export const FlowerInfo = () => {
                   </p>
                 </div>
 
-                {/* Grid Info (Symbolism & Occasion) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 border-y border-stone-100">
                   <div className="space-y-3">
                     <h4 className="font-bold text-[10px] uppercase tracking-widest text-stone-800">Symbolism</h4>
@@ -168,7 +163,6 @@ export const FlowerInfo = () => {
           </div>
         </div>
 
-        {/* Global Pagination Dots Below the entire section */}
         <div className="flex justify-center gap-3 mt-20">
             {BOTANICAL_DATA.map((_, i) => (
               <button
