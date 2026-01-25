@@ -56,23 +56,28 @@ src/
 ```bash
 git clone https://github.com/yourusername/terra-bloom.git
 cd terra-bloom
+```
 
 ### 2. Install dependencies
 ```bash
 pnpm install
+```
 
-###3. Start the development server
+### 3. Start the development server
 ```bash
 pnpm dev
-
-###4. Build for production
 ```
+
+### 4. Build for production
+```bash
 pnpm build
+```
 
 ----
 
 License
 This project is open source under the MIT License.
+
 
 
 
