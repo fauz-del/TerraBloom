@@ -2,15 +2,15 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react';
 
 const IMAGES = [
-  { url: '/flowers/hero1.jpeg', label: 'Ethereal' },
-  { url: '/flowers/hero2.jpeg', label: 'Wild' },
-  { url: '/flowers/hero3.jpeg', label: 'Sculptural' }
+  { url: `${BASE}flowers/hero1.jpeg`, label: 'Ethereal' },
+  { url: `${BASE}flowers/hero2.jpeg`, label: 'Wild' },
+  { url: `${BASE}flowers/hero3.jpeg`, label: 'Sculptural' }
 ];
 
 export const Hero = () => {
   const [index, setIndex] = useState(0);
   const { scrollY } = useScroll();
-  
+
   const y1 = useTransform(scrollY, [0, 500], [0, -150]);
   const y2 = useTransform(scrollY, [0, 500], [0, -50]);
 
@@ -20,7 +20,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[100vh] w-full flex items-center justify-center overflow-hidden bg-[#FCF8F3]">
+    <section className="relative min-h-[100vh] w-full flex items-center justify-center overflow-hidden bg-[#FCF8F3]">    
       <motion.h2 
         style={{ y: y2 }}
         className="absolute top-1/4 left-10 text-[15vw] font-cursive opacity-5 text-stone-900 pointer-events-none"
@@ -28,8 +28,7 @@ export const Hero = () => {
         Authentic
       </motion.h2>
 
-      <div className="container mx-auto px-10 grid grid-cols-12 gap-4 items-center z-10">
-    
+      <div className="container mx-auto px-10 grid grid-cols-12 gap-4 items-center z-10">  
         <div className="col-span-12 lg:col-span-5 z-20">
           <motion.div
             initial="hidden"
@@ -60,7 +59,7 @@ export const Hero = () => {
             </motion.p>
           </motion.div>
         </div>
-
+        
         <div className="col-span-12 lg:col-span-7 relative flex justify-end">
           <motion.div 
             style={{ y: y1 }}
@@ -77,7 +76,7 @@ export const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </AnimatePresence>
-            
+                
             <div className="absolute inset-0 bg-gradient-to-t from-[#FCF8F3]/40 via-transparent to-transparent" />
           </motion.div>
 
@@ -85,7 +84,7 @@ export const Hero = () => {
             style={{ y: y2 }}
             className="absolute -bottom-10 -left-10 md:left-0 w-48 h-64 border-[12px] border-white shadow-xl hidden md:block overflow-hidden"
           >
-            <img src="/flowers/hero4.jpeg" className="w-full h-full object-cover" alt="Detail" />
+            <img src={`${BASE}flowers/hero4.jpeg`} className="w-full h-full object-cover" alt="Detail" />
           </motion.div>
         </div>
       </div>
