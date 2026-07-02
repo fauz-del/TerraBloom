@@ -1,20 +1,22 @@
-/* Fix: Explicitly import the fonts and weights needed for the design */
-@import url('https://fonts.googleapis.com');
+/* Import Google Fonts explicitly */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&display=swap');
 
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Base styles */
 @layer base {
   body {
-    @apply bg-[#FCF8F3] text-stone-800 antialiased;
+    @apply bg-[#FCF8F3] text-gray-800 antialiased;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
   }
 }
 
+/* Custom utilities */
 @layer utilities {
-  /* This ensures the snap-scroll in Collection.tsx works without ugly scrollbars */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -32,7 +34,7 @@
   }
 }
 
-/* Custom scrollbar for desktop elegance */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -44,7 +46,12 @@
   border-radius: 10px;
 }
 
-/* Selection color for that premium 2026 feel */
+/* Title utility */
+.title {
+  @apply text-gray-800 font-serif text-5xl;
+}
+
+/* Selection styling */
 ::selection {
   background-color: #d4a373;
   color: white;
